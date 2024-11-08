@@ -73,12 +73,7 @@ public class StatisticsOfGrades{
         System.out.print("  " + symbol.repeat(5) + "+");
         System.out.println();
 
-        System.out.print("  I  0-20  ");
-        System.out.print(" I  21-40  ");
-        System.out.print("I  41-60  ");
-        System.out.print("I  61-80  ");
-        System.out.print("I  81-100 I");
+        System.out.print("  I  0-20  " + " I  21-40  " + "I  41-60  " + "I  61-80  " + "I  81-100 I");
         System.out.println();
-
     }
 }
