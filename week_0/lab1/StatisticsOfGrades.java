@@ -13,6 +13,10 @@ public class StatisticsOfGrades{
         int[] grades = new int[gradesString.length];
         for(int i = 0; i < gradesString.length; i++){
             grades[i] = Integer.parseInt(gradesString[i]);
+            if (grades[i] < 0 || grades[i] > 100) {
+                System.out.println("Invalid grade entered. Each grade should be between 0 and 100.");
+                System.exit(0);
+            }
         }
         System.out.println("Values: ");
 
@@ -27,35 +31,34 @@ public class StatisticsOfGrades{
         for(int i = 0; i < grades.length; i++){
             sum += grades[i];
         }
-        double average = sum / grades.length;
+        double average = (double)sum / grades.length;
         System.out.println("Average = " + average);
 
-        // Collect data for the range of grades
-        int[] ranges = new int[5];
+        // Frequency of the range of grades
+        int[] stats = new int[5];
         for(int grade : grades){
             if(grade >= 0 && grade <= 20){
-                ranges[0]++;
+                stats[0]++;
             } else if(grade >= 21 && grade <= 40){
-                ranges[1]++;
+                stats[1]++;
             } else if(grade >=41 && grade <= 60){
-                ranges[2]++;
+                stats[2]++;
             } else if(grade >= 61 && grade <= 80){
-                ranges[3]++;
+                stats[3]++;
             } else {
-                ranges[4]++;
+                stats[4]++;
             }
         }
 
-        System.out.println("Range of grades = " + Arrays.toString(ranges));
+        System.out.println("Frequency of grouped data = " + Arrays.toString(stats));
         System.out.println();
-        System.out.println("Graph: ");
+        System.out.println("Bar Graph: ");
 
         // vertical axis
         for(int i = 6; i > 0; i--){
-            //System.out.printf("%2d > ", i);
             System.out.print(i + " > ");
             for (int j = 0; j < 5; j++) {
-                if (ranges[j] >= i) {
+                if (stats[j] >= i) {
                     System.out.print("#######   ");
                 } else {
                     System.out.print("          ");
