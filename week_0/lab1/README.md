@@ -11,4 +11,4 @@ This program takes a number of grades as input from the user and performs severa
 - Displays a bar graph to show the frequency of grade in each range.
 
 ## Sample Input and Corresponding Output
-![Bar Graph](../../lab1.png)
+![Bar Graph](../../images/lab1.png)
