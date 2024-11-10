@@ -14,4 +14,4 @@ When multiplying a matrix A of dimensions (n, m) with a matrix B of dimensions (
 Matrix multiplication is performed by multiplying the components of the two matrices row by column.
 
 ## Sample Input and Output
-![Matrix](../../lab2.png)
+![Matrix](../../images/lab2.png)
