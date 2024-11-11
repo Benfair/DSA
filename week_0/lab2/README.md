@@ -5,6 +5,7 @@ This is an application that performs matrix multiplication based on user input. 
 
 ## Features
 - Prompts the user to enter the number of rows and columns, and elements of two matrices, A and B.
+  - Asks the user to enter the number of columns in matrix A and the number of rows in matrix B at the same time because they should be equal for the matrix multiplication to take place.
 - Provides error handling for non-integer inputs and dimension mismatches.
 - Displays input matrices A and B.
 - Computes and displays the resulting matrix C after performing the multiplication. 
