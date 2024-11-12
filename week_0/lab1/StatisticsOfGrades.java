@@ -37,13 +37,13 @@ public class StatisticsOfGrades{
         // Frequency of the range of grades
         int[] stats = new int[5];
         for(int grade : grades){
-            if(grade >= 0 && grade <= 20){
+            if(grade <= 20){
                 stats[0]++;
-            } else if(grade >= 21 && grade <= 40){
+            } else if(grade <= 40){
                 stats[1]++;
-            } else if(grade >=41 && grade <= 60){
+            } else if(grade <= 60){
                 stats[2]++;
-            } else if(grade >= 61 && grade <= 80){
+            } else if(grade <= 80){
                 stats[3]++;
             } else {
                 stats[4]++;
@@ -54,8 +54,16 @@ public class StatisticsOfGrades{
         System.out.println();
         System.out.println("Bar Graph: ");
 
+        // Find the maximum value in the stats array
+        int maxValue = 0;
+        for (int value : stats) {
+            if (value > maxValue) {
+                maxValue = value;
+            }
+        }
+
         // vertical axis
-        for(int i = 6; i > 0; i--){
+        for(int i = maxValue; i > 0; i--){
             System.out.print(i + " > ");
             for (int j = 0; j < 5; j++) {
                 if (stats[j] >= i) {
